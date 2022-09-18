@@ -1,7 +1,105 @@
-html, body {
-    margin: 0;
-    padding: 0;
-  }
-  canvas {
+
+body{
+    width: 100%;
+    max-width: 1400px;
     display: block;
-  }
+    margin: auto;
+    
+    min-height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color:rgb(0, 0, 2); 
+}
+  
+.project-section{
+    width: 80%;
+    min-height: 100vh;
+    padding: 15px 100px 100px;
+    position: relative;
+    top: 0;
+    transition: 1s;
+    opacity: 1;
+}
+
+.project-heading{
+    font-size: 100px;    
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #faf0fa;
+}
+
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 100px;
+}
+
+.project-card{
+    height:400px;
+    position:relative;  
+}
+
+.project-img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    transition: .5s;
+    border-radius: 20px;
+    
+}
+
+.project-content{
+    position: relative;
+    padding: 40px;
+    color: #fff;
+    transition: .5s;
+    opacity: 0;
+}
+
+.project-title{
+    font-size: 50px;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 300;
+}
+
+.project-info{
+    margin: 40px;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.project-btn-grp{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.project-btn{
+    height: 35px;
+    text-transform: capitalize;
+    font-size: 16px;
+    border: none;
+    background: #000;
+    color:#fff;
+    cursor: pointer;
+}
+
+.project-btn.live{
+   background: none;
+   border: 2px solid #fff;
+}
+
+.project-card:hover .project-img{
+  filter:blur(20px);
+
+}
+
+.project-card:hover .project-content{
+    opacity: 1;
+}
+
